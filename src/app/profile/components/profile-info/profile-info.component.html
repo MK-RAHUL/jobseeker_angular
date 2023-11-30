@@ -19,21 +19,21 @@
                                     </div>
                                   </label>
                                   <input type="file" id="profilePictureInput" class="d-none">
-                                    <h5 class="h5-fluid text-center text-dark">{{user.firstName}} {{user.lastName}}</h5>
-                                    <p class="text-center small">{{user.designation}}</p>
+                                    <h5 class="h5-fluid text-center text-dark">Mohammed Faheem</h5>
+                                    <p class="text-center small">Developer</p>
                                     <div class="bg-info text-primary font-weight-bold bg-light rounded h-20 mb-4 text-center">
                                         <label for="fileInput" class="form-label"> <img class="img-fluid " src="assets/images/upload 1.png">RESUME</label>
                                         <input type="file" class="form-control d-none" id="fileInput" name="fileInput">
                                     </div>
-                                    <img class="img-fluid mr-3" src="../../../../assets/images/message-2 - Copy.png">{{user.email}}<br>
-                                    <img class="img-fluid mr-3" src="assets/images/call.png">{{user.phoneNumber}}<br>
+                                    <img class="img-fluid mr-3" src="../../../../assets/images/message-2 - Copy.png">faheem@gmail.com<br>
+                                    <img class="img-fluid mr-3" src="assets/images/call.png">5445845454<br>
                                     <img class="img-fluid mr-3" src="assets/images/location.png">location                            
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 border rounded pb-4 mr-4 p-3 ">
                                     <h5 class="h5-fluid text-dark">About Me</h5>
-                                    <p>{{user.aboutMe}}</p>
+                                    <p>Im a Full Stack Developer</p>
                                     <hr>
                                     <div class="d-flex justify-content-end">
                                     <button class="btn edit-button" data-toggle="collapse" data-target="#aboutForm"><img src="assets/images/edit-2.png" class="img-thumbnail" alt="edit img"></button>
@@ -72,7 +72,7 @@
                                       <ul class="list-unstyled horizontal-list">
                                         <li text-secondary *ngFor="let item of skill">
                                           <span class="circle-bullet"></span>
-                                          {{item}}
+                                          {{item.name}}
                                         </li>
                                       </ul>
                                       
