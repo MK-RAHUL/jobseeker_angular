@@ -129,16 +129,21 @@
                         <i class="bi bi-x-circle" (click)="deleteSkill(item._id)"></i>
                       </li>
                       <div class="serach">
-                        <input type="search" class="form-control" [(ngModel)]="searchText" id="search-text" aria-describedby="search-text" placeholder="Search Skills">
-                        <ul class="list-group list-group-flush">
-      <!-- results of ngFor is passed to appFilter with argument searchText -->
+                        <!-- <input type="search" class="form-control" [(ngModel)]="searchText" id="search-text" aria-describedby="search-text" placeholder="Search Skills"  *ngFor="let c of skill | filterSkills: searchText" value="{{c.name}}"> -->
+                        <!-- <ul class="list-group list-group-flush">
       <li class="list-group-item" *ngFor="let c of skill | filterSkills: searchText">
-         appSkills [searchedWord]="searchText" [content]="c.name"  
-        [classToApply]="'font-weight-bold'" [setTitle]="'true'">
         {{c.name}}
       </li>
-    </ul>
-   
+    </ul> -->
+    <div class="form-group">
+      <label for="search-text">Search Skills:</label>
+      <!-- <input type="text" class="form-control" [(ngModel)]="searchText" id="search-text" aria-describedby="search-text" placeholder="Search Skills"> -->
+    
+      <select class="form-control" id="selectedSkill" [(ngModel)]="searchText">
+        <option *ngFor="let skill of skill">{{ skill.name }}</option>
+      </select>
+    </div>
+    
                       </div>
                     </ul>
 
