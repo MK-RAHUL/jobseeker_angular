@@ -17,4 +17,12 @@ this.skillService.getallskills().subscribe((res) => {
 },
 )
   }
+  deleteSkill(id:number){
+    this.skillService.deleteSkill(id).subscribe((res) => {
+      if (res) {
+     alert("Skill deleted")
+      }
+    })
+
+  }
 }

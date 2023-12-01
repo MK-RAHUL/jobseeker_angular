@@ -126,6 +126,7 @@
                       <li text-secondary *ngFor="let item of skill">
                         <span class="circle-bullet"></span>
                         {{ item.name }}
+                        <i class="bi bi-x-circle" (click)="deleteSkill(item._id)"></i>
                       </li>
                     </ul>
 

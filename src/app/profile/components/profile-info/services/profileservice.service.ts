@@ -13,4 +13,9 @@ export class ProfileserviceService {
   getallskills(){
     return this.http.get<any[]>(environment.baseurl + '/api/v1/skills')
   }
+
+  deleteSkill(id:number){
+    return this.http.delete(environment.baseurl + `/api/v1/skills/${id}`)
+
+  }
 }

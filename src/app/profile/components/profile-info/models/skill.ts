@@ -1,5 +1,6 @@
 export class Skill {
     name: string;
-    // description: string;
+    description: string;
+    _id: number;
   }
   
